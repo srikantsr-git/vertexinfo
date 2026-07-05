@@ -1,0 +1,1 @@
+:root{--logo-desktop-h:48px;--logo-mobile-h:28px}.site-header__logo-link{align-items:center;display:inline-flex;line-height:0}@media (min-width:1025px){.site-header__logo-desktop{display:block;height:var(--logo-desktop-h);max-width:100%;width:auto}}@media (max-width:1024px){.site-header__logo-mobile{display:block;height:var(--logo-mobile-h);max-width:100%;width:auto}}

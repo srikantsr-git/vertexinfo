@@ -1,0 +1,330 @@
+.thcx-client-logos  {
+     background: #EDEDEE;
+ }
+
+
+/* Heading (keep site typography) */
+.customer-obsessed-brands {
+     background: #EDEDEE;
+     padding: 92px 0 0;
+ }
+
+.customer-brands-logo {
+     background: #EDEDEE;
+     padding: 0 0 77px;
+     padding-top: 35px;
+ }
+
+.customer-obessed-span9 {
+     padding-right: 50px;
+ }
+
+.customer-obsessed-brands h2 {
+    
+  font-family: 'Vastago Grotesk';
+     font-style: normal;
+     font-weight: 600;
+    
+  font-size: 40px;
+     line-height: 50px;
+     letter-spacing: -0.02em;
+     color: #000;
+    
+}
+
+/* Shared spacing tokens */
+.thcx-client-logos {
+     --gap-x: 32px;
+     --gap-y: 24px;
+ }
+
+
+/* One grid wrapper per breakpoint (only one visible at a time) */
+.thcx-grid {
+     width: 100%;
+     margin: 0;
+     padding: 46px 0 0;
+     box-sizing: border-box;
+ }
+
+.thcx-grid--d {
+     display: block !important;
+ }
+
+.thcx-grid--t,  .thcx-grid--m {
+     display: none !important;
+ }
+
+
+@media (max-width:1024px) {
+    
+  .thcx-grid--d {
+     display: none !important;
+ }
+
+  .thcx-grid--t {
+     display: block !important;
+ }
+
+}
+@media (max-width:640px) {
+    
+  .thcx-grid--t {
+     display: none !important;
+ }
+
+  .thcx-grid--m {
+     display: block !important;
+ }
+
+}
+
+/* Rows (explicit counts per row) */
+.thcx-row {
+    
+  display: flex;
+     flex-wrap: nowrap;
+     align-items: center;
+    
+  gap: var(--gap-x);
+    
+  margin: 0 0 var(--gap-y) 0;
+     padding: 0;
+     list-style: none;
+    
+}
+
+/* Desktop widths (overflow-safe:  allow tiny shrink + min-width:0) */
+.thcx-grid--d .thcx-row.row-8  > li.brand {
+     flex: 0 1 calc((100% - (7 * var(--gap-x))) / 8);
+      min-width: 0;
+ }
+
+.thcx-grid--d .thcx-row.row-7   {
+     justify-content: center;
+ }
+
+.thcx-grid--d .thcx-row.row-7  > li.brand {
+     flex: 0 1 calc((100% - (6 * var(--gap-x))) / 7);
+      min-width: 0;
+ }
+
+
+/* Tablet widths */
+@media (max-width:1024px) {
+    
+  .thcx-grid--t .thcx-row.row-5 > li.brand {
+     flex: 0 1 calc((100% - (4 * var(--gap-x))) / 5);
+     min-width: 0;
+ }
+
+  .thcx-grid--t .thcx-row.row-4  {
+     justify-content: center;
+ }
+
+  .thcx-grid--t .thcx-row.row-4 > li.brand {
+     flex: 0 1 calc((100% - (3 * var(--gap-x))) / 4);
+     min-width: 0;
+ }
+
+}
+
+/* Mobile widths — always uniform 3-up */
+@media (max-width:640px) {
+    
+  .thcx-grid--m .thcx-row.row-3 > li.brand {
+     flex: 0 1 calc((100% - (2 * var(--gap-x))) / 3);
+     min-width: 0;
+ }
+
+}
+
+/* Brand cell + fixed-height logo box (prevents SVG quirks) */
+.thcx-row > li.brand {
+     display: flex;
+ }
+
+.thcx-row > li.brand .logo-box {
+    
+  height: 102px;
+     width: 100%;
+    
+  display: flex;
+     align-items: center;
+     justify-content: center;
+     box-sizing: border-box;
+    
+}
+@media (max-width: 1024px) {
+     .thcx-row > li.brand .logo-box {
+     height: 72px;
+ }
+ }
+/* Make logos a touch bigger on mobile */
+@media (max-width:640px) {
+    
+  .thcx-client-logos {
+     --gap-x: 20px;
+ }
+      /* tighter columns -> wider cells */
+  .thcx-row > li.brand .logo-box {
+     height: 64px;
+ }
+
+}
+
+/* Clamp logos to their cell (beats any global img rules) */
+.thcx-grid .thcx-row > li.brand .logo-box img {
+    
+  display: block !important;
+    
+  width: auto !important;
+    
+  height: 100% !important;
+          /* fills the fixed box height */
+  max-height: 100% !important;
+    
+  max-width: 100% !important;
+       /* never wider than the cell */
+  object-fit: contain;
+    
+  min-width: 1px;
+     min-height: 1px;
+    
+}
+
+/* Exact side padding on tablet/mobile — remove theme’s extra 10px inside this module */
+@media (max-width: 1024px) {
+    
+  .thcx-client-logos .page-center, 
+  .thcx-client-logos .page-center50 {
+    
+    padding-left: 0 !important;
+     padding-right: 0 !important;
+    
+  }
+  .thcx-client-logos .customer-obsessed-brands, 
+  .thcx-client-logos .thcx-grid {
+    
+    padding-left: 35px !important;
+     padding-right: 35px !important;
+    
+  }
+}
+@media (max-width: 768px) {
+    
+  .thcx-client-logos .page-center, 
+  .thcx-client-logos .page-center50 {
+    
+    padding-left: 0 !important;
+     padding-right: 0 !important;
+    
+  }
+  .thcx-client-logos .customer-obsessed-brands, 
+  .thcx-client-logos .thcx-grid {
+    
+    padding-left: 25px !important;
+     padding-right: 25px !important;
+    
+  }
+}
+#closer_videopopup{
+    position: absolute;
+    display: table-cell;
+    right: 2%;
+    top: 2%;
+    font-size: 32px;
+    text-align: center;
+    vertical-align: middle;
+    padding: auto;
+    cursor: default;
+    background: none;
+    border: none;
+    color: #ffffff;
+
+
+    z-index: 100004;
+}
+#opct{
+    position: fixed;
+    z-index: 100000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    filter: alpha(opacity=90);
+    -moz-opacity: 0.90;
+    opacity: 0.9;
+}
+#videCont{
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 0px;
+    height: 0;
+    margin: auto;
+    max-width: 100%;
+    height: 0;
+    height: auto !important;
+}
+video{
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    opacity: 1 !important;
+
+}
+#yt_video{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0; overflow: hidden;
+    max-width: 100%;
+}
+iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1 !important;
+
+}
+#video1{
+    cursor: pointer; cursor: hand;
+}
+/* Scroll to Top Button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  background-color: #0c0c0c;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+#scrollTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+#scrollTopBtn:hover {
+  background-color: #333;
+  transform: translateX(-50%) translateY(-3px);
+  color: white;
+}
+#scrollTopBtn svg {
+  width: 24px;
+  height: 24px;
+}
